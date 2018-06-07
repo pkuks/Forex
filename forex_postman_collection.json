@@ -1,0 +1,136 @@
+{
+	"variables": [],
+	"info": {
+		"name": "forex_postman_collection",
+		"_postman_id": "312490bb-5834-f519-7a11-fa9da72b3c9a",
+		"description": "requests to test the forex api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllForex",
+			"request": {
+				"url": "",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getForex",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/getForex?sDate=2017-01-02&fromCcy=CHF&toCcy=SGD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getForex"
+					],
+					"query": [
+						{
+							"key": "sDate",
+							"value": "2017-01-02",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "fromCcy",
+							"value": "CHF",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "toCcy",
+							"value": "SGD",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get exchange rate between two currencies for a date"
+			},
+			"response": []
+		},
+		{
+			"name": "getForexForDateRange",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/getForexForDateRange?sFromDate=2017-01-01&sToDate=2017-01-10&ccy=CHF",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getForexForDateRange"
+					],
+					"query": [
+						{
+							"key": "sFromDate",
+							"value": "2017-01-01",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sToDate",
+							"value": "2017-01-10",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "ccy",
+							"value": "CHF",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Given a date range and a given currency, find the exchange rate\r\nof that currency (wrt USD) for the entire date range"
+			},
+			"response": []
+		},
+		{
+			"name": "Async getAllForex",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/asyncForex?sDate=2017-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"asyncForex"
+					],
+					"query": [
+						{
+							"key": "sDate",
+							"value": "2017-01-01",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Async requestfor getAllForex"
+			},
+			"response": []
+		}
+	]
+}
