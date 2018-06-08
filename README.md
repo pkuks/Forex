@@ -1,5 +1,6 @@
 
-Forex app is with features to
+Forex app provides features to
+-------------------------------
 - Get All Forex for a date (http://localhost:8080/forex?sDate=2017-01-01)
 
 - Get Exchange Rate between two currencies for a date (http://localhost:8080/getForex?sDate=2017-01-02&fromCcy=CHF&toCcy=SGD)
@@ -11,6 +12,7 @@ Forex app is with features to
 This application uses Spring Boot, JPA, H2 in memory database
 
 Project Structure
+------------------
 
 - model - this contains the entities used in the project
 - repository - repository layer for database
@@ -33,12 +35,14 @@ There is one copy of API get all Forex implemented as Async method.
 
 
 How to run the application
+---------------------------
 Copy the Forex-0.0.1-SNAPSHOT.jar from target directory (https://github.com/pkuks/Forex/blob/master/target/Forex-0.0.1-SNAPSHOT.jar) to your local folder
 
 run below command (ensure port 8080 is not used by any other service)
 C:\<local folder>>java -jar Forex-0.0.1-SNAPSHOT.jar
 
 How to test the application
+----------------------------
 There are two ways to test the application
 
 1) Access the URL provided at top of this page to test the apis in browser
